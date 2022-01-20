@@ -1,0 +1,667 @@
+<div>
+  <!-- 	alert nav -->
+  <div
+    class="alert alert-dark alert-dismissible fade show font-weight-bold"
+    role="alert"
+  >
+    <ul class="nav d-flex justify-content-center">
+      <li class="alert-nav-item">
+        <a class="nav-link active"> Travel with confidence during COVID-19: </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active">Best Rate Guarantee</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Flexible Cancellation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Committed to Clean</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" tabindex="-1" aria-disabled="true"
+          >Contactless Serivces</a
+        >
+      </li>
+    </ul>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <!-- 	navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand col-4" target="_blank">
+      <img
+        class="c-image"
+        alt=""
+        itemprop="logo"
+        itemscope="itemscope"
+        src="../../assets/logo.png"
+        style="height: 81px"
+        class="img-fluid"
+      />
+    </a>
+
+    <ul class="navbar-nav w-100 col-7.5 row d-flex justify-content-end pr-2">
+      <div class="dropdown">
+        <li>
+          <button
+            class="btn btn-secondary dropdown-toggle h6 bg-white text-dark"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            ENGLISH
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item">DEUTSCH</a>
+            <a class="dropdown-item">ESPANOL</a>
+            <a class="dropdown-item">PORTUGUES</a>
+          </div>
+        </li>
+      </div>
+
+      <li>
+        <a class="nav-link text-15 h6" (click)="routeToAmdminPanel()">ADMIN</a>
+      </li>
+      <ul class="navbar-nav w-100 col-7.5 row-2 d-flex justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link h6">YACHTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h6">MARINAS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h6">RESIDENCES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h6 border">RESERVE NOW</a>
+        </li>
+      </ul>
+    </ul>
+  </nav>
+
+  <!-- 	carousel -->
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-ride="carousel"
+  >
+    <div class="carousel-inner" style="height: 700px">
+      <div class="carousel-item active">
+        <img
+          src="https://s7d2.scene7.com/is/image/ritzcarlton/RCCANCU_00365_conversion?$XlargeViewport100pct$"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption">
+          <p class="text-dark"></p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="https://s7d2.scene7.com/is/image/ritzcarlton/RCGNDCA_00179_conversion?$XlargeViewport100pct$"
+          class="d-block w-100"
+          alt="https://s7d2.scene7.com/is/image/ritzcarlton/RCARUBA_00058_conversion?$XlargeViewport100pct$"
+        />
+        <div class="carousel-caption">
+          <p>Gallions Point, Greater London</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="https://s7d2.scene7.com/is/image/ritzcarlton/RCARUBA_00058_conversion?$XlargeViewport100pct$"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption">
+          <p>South Dock, Greater London.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="https://s7d2.scene7.com/is/image/ritzcarlton/StThomas-PerfectWeekend1?$XlargeViewport100pct$"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption">
+          <p class="text-light">Howth Yacht Club and Marina. Howth, Dublin</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="https://s7d2.scene7.com/is/image/ritzcarlton/50505124-5SJDZR_ZadunPool-1?$XlargeViewport100pct$"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption">
+          <p>Ballydavid Pier. Ballydavid</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="https://s7d2.scene7.com/is/image/ritzcarlton/Mexico_City_Midnight_Supper_0051?$XlargeViewport100pct$"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption">
+          <p>South Dock, Greater London.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="https://s7d2.scene7.com/is/image/ritzcarlton/07_Girl_Tree_2201_39L?$XlargeViewport100pct$"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption">
+          <p class="text-light">Ballydavid Pier. Ballydavid</p>
+        </div>
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!-- booking jumbotron		 -->
+  <div class="jumbotron jumbotron-fluid bg-dark mh-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <ul class="list-group">
+            <div class="input-group mb-3 border-bottom">
+              <input
+                type="text"
+                class="form-control bg-dark border-dark"
+                placeholder="Choose Location"
+                aria-label="Choose Location"
+                aria-describedby="basic-addon2"
+              />
+              <div class="input-group-append">
+                <span
+                  class="input-group-text bg-dark border-dark"
+                  id="basic-addon2"
+                ></span>
+              </div>
+            </div>
+
+            <div class="containter">
+              <div class="row">
+                <div
+                  class="mb-2 dropdown btn-block col-sm d-flex justify-content-start"
+                >
+                  <button
+                    class="btn btn-secondary dropdown-toggle col-sm bg-dark text-light border-bottom"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    1 Spot
+                  </button>
+                </div>
+
+                <div
+                  class="mb-2 dropdown btn-block col-sm d-flex justify-content-start"
+                >
+                  <button
+                    class="btn btn-secondary dropdown-toggle col-sm bg-dark text-light border-bottom"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    2 Person
+                  </button>
+                </div>
+              </div>
+
+              <div class="input-group mb-3 border-bottom">
+                <input
+                  type="text"
+                  class="form-control bg-dark border-dark"
+                  placeholder="Enter Code (optional)"
+                  aria-label="Enter Code (optional)"
+                  aria-describedby="basic-addon2"
+                />
+                <div class="input-group-append">
+                  <span
+                    class="input-group-text bg-dark border-dark"
+                    id="basic-addon2"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div class="col-sm">
+          <ul class="list-group">
+            <div class="input-group mb-3 border-bottom">
+              <input
+                type="text"
+                class="form-control bg-dark border-dark"
+                placeholder="Oct 7, 2020 - Oct 8, 2020"
+                aria-label="Oct 7, 2020 - Oct 8, 2020"
+                aria-describedby="basic-addon2"
+              />
+              <div class="input-group-append">
+                <span
+                  class="input-group-text bg-dark border-dark"
+                  id="basic-addon2"
+                ></span>
+              </div>
+            </div>
+            <li class="list-group-item disabled bg-dark" aria-disabled="true">
+              <div class="form-check bg-dark">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >MY DATES ARE FLEXIBLE</label
+                >
+              </div>
+            </li>
+
+            <li class="list-group-item disabled bg-dark" aria-disabled="true">
+              <div class="form-check bg-dark">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >USE MY REWARDS POINTS</label
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm">
+          <ul class="list-group">
+            <button type="button" class="btn btn-info rounded-0 text-dark">
+              CHECK AVAILABILITY
+            </button>
+            <!-- <a class="list-group-item list-group-item-action bg-dark text-info"
+              >VIEW EXISTING RESERVATIONS</a
+            >
+            <a class="list-group-item list-group-item-action bg-dark text-info"
+              >BOOK HOTEL, AIRFARE & CAR TOGETHER</a
+            >
+            <a class="list-group-item list-group-item-action bg-dark text-info"
+              >RESERVE BY PHONE</a
+            > -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 		main jumbotron -->
+  <div
+    class="jumbotron jumbotron-fluid mt-5"
+    style="
+      box-shadow: 3px -1px 30px 0px rgba(80, 191, 227, 0.75);
+      -webkit-box-shadow: 3px -1px 30px 0px rgba(80, 191, 227, 0.75);
+      -moz-box-shadow: 3px -1px 30px 0px rgba(80, 191, 227, 0.75);
+    "
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <!-- <h6>HOTELS AND RESORTS IN THE CARIBBEAN</h6> -->
+          <h1>ISLAND-INSPIRED LUXURY</h1>
+        </div>
+        <div class="col-7">
+          <p class="pl-5">
+            With its turquoise blue water, diverse ecosystem, warm breezes, rich
+            history and soft-sand beaches, the Caribbean is a destination for
+            seekers of both adventure and escape. Blending elegance with island
+            living, The Ritz-Carlton offers a collection of hotels and resorts
+            where guests can balance a day of watersports and golf with spa
+            treatments and poolside lounging.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class="d-flex justify-content-center font-weight-normal mb-4">
+      POPULAR MARINAS IN ADIATRIC
+    </h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card rounded-0" style="width: 22rem">
+          <img
+            src="https://s3-eu-west-1.amazonaws.com/zalinga/photos/800x600/111830d2-c05e-450b-b893-259332e8f91d/smallpicture.jpg"
+            class="card-img-top rounded-0"
+            alt="..."
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <p class="card-text h6">
+              <img
+                src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-boat-beach-wanicon-flat-wanicon.png"
+              />
+              ACI Marinas
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card rounded-0" style="width: 22rem">
+          <img
+            src="https://s3-eu-west-1.amazonaws.com/zalinga/800x600/1dd35f06-e284-478a-9865-664d791d2bab.jpg"
+            class="card-img-top rounded-0"
+            alt="..."
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <p class="card-text h6">
+              <img
+                src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-boat-beach-wanicon-flat-wanicon.png"
+              />
+              ACI Marina Milnas
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card rounded-0" style="width: 22em">
+          <img
+            src="https://s3-eu-west-1.amazonaws.com/zalinga/800x600/be22c5cc-6eae-488c-b4b1-1f6c1f9759b5.jpg"
+            class="card-img-top rounded-0"
+            alt="..."
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <p class="card-text h6">
+              <img
+                src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-boat-beach-wanicon-flat-wanicon.png"
+              />
+              MARINA VLASKA
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 		text/media -->
+  <div class="media container my-5">
+    <div class="media-body">
+      <h6 class="mt-0">RITZ KIDS</h6>
+      <h1>FAMILY-FRIENDLY CARIBBEAN VACATIONS</h1>
+      <p>
+        The Ritz Kids program encourages young guests to explore a destination’s
+        landscape and wildlife through fun, interactive experiences. In the
+        Caribbean, activities include stargazing in Puerto Rico and nighttime
+        snorkeling in Grand Cayman.
+      </p>
+      <button type="button" class="btn btn-dark rounded-0">
+        <h6>LEARN MORE</h6>
+      </button>
+    </div>
+    <img
+      src="https://s7d2.scene7.com/is/image/ritzcarlton/RCGNDCA_00302_conversion?$XlargeViewport100pct$"
+      class="align-self-start pl-5"
+      alt="..."
+      style="width: 75%"
+    />
+  </div>
+
+  <!-- 		new destinations cards -->
+  <div class="container">
+    <h3 class="d-flex justify-content-center font-weight-normal mb-4">
+      NEW & UPCOMING DESTINATIONS
+    </h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card rounded-0" style="width: 22rem">
+          <img
+            src="https://s3-eu-west-1.amazonaws.com/zalinga/photos/800x600/c1467e29-b0a0-4c9e-80ee-1c64aa7bfbd5/smallpicture.jpg"
+            class="card-img-top rounded-0"
+            alt="..."
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <p class="card-text h6">
+              <img src="https://img.icons8.com/color/48/000000/turkey.png" />
+              TURKEY
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card rounded-0" style="width: 22rem">
+          <img
+            src="https://s3-eu-west-1.amazonaws.com/zalinga/photos/800x600/16353022-f53b-440b-935d-17fe40be5b65/smallpicture.jpg"
+            class="card-img-top rounded-0"
+            alt="..."
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <p class="card-text h6">
+              <img src="https://img.icons8.com/color/48/000000/germany.png" />
+              GERMANY
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card rounded-0" style="width: 22em">
+          <img
+            src="https://s3-eu-west-1.amazonaws.com/zalinga/photos/800x600/3af63782-0668-4bc7-8891-381e1a536267/smallpicture.jpg"
+            class="card-img-top rounded-0"
+            alt="..."
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <p class="card-text h6">
+              <img src="https://img.icons8.com/color/48/000000/austria.png" />
+              AUSTRIA
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main jumbotron 2 -->
+    <div class="jumbotron jumbotron-fluid my-5">
+      <div class="container">
+        <h3 class="font-weight-normal d-flex justify-content-center">
+          BEYOND BEACHES
+        </h3>
+        <p class="d-flex justify-content-center pt-3">
+          Island experiences that take you out of the water.
+        </p>
+      </div>
+    </div>
+
+    <!-- 		stacked text/media -->
+    <div class="media container d-flex align-items-center">
+      <img
+        src="https://s7d2.scene7.com/is/image/ritzcarlton/RCCANCU_00382_conversion?$LargeViewport42pct$"
+        class="align-self-start pr-5"
+        alt="..."
+        style="width: 55%"
+      />
+      <div class="media-body">
+        <h3>DINE WITH THE CHEF IN CANCUN</h3>
+        <p>
+          Join resort chefs in the Culinary Center to learn the secrets behind
+          Mexican and Italian cuisines. Hands-on classes are offered throughout
+          the week, and meals are paired with craft cocktails and wine. Kids
+          classes are also available.
+        </p>
+        <button type="button" class="btn btn-dark rounded-0">
+          <h6>LEARN MORE</h6>
+        </button>
+      </div>
+    </div>
+
+    <div class="media container d-flex align-items-center">
+      <div class="media-body">
+        <h3>SET SAIL IN GRAND CAYMAN</h3>
+        <p>
+          Discover historical shipwrecks, colorful coral reefs and an array of
+          marine life aboard a state-of-the-art hydrofoil boat. A six-foot,
+          curved-glass dome magnifies everything under the sea to twice its
+          size.
+        </p>
+        <button type="button" class="btn btn-dark rounded-0">
+          <h6>LEARN MORE</h6>
+        </button>
+      </div>
+      <img
+        src="https://s7d2.scene7.com/is/image/ritzcarlton/GrandCayman2018-33?$LargeViewport42pct$"
+        class="align-self-start pl-5"
+        alt="..."
+        style="width: 54%"
+      />
+    </div>
+
+    <div class="media container d-flex align-items-center">
+      <img
+        src="https://s7d2.scene7.com/is/image/ritzcarlton/RCDORAD_00259_conversion?$LargeViewport42pct$"
+        class="align-self-start pr-5"
+        alt="..."
+        style="width: 55%"
+      />
+      <div class="media-body">
+        <h3>TAKE A HIKE IN DORADO BEACH</h3>
+        <p>
+          Amid the resort’s 50 acres, the 11-mile Rockefeller Nature Trail can
+          be explored by bike, foot or golf cart and offers a changing landscape
+          that takes in the Atlantic Ocean, tree-shaded forests and two golf
+          courses.
+        </p>
+        <button type="button" class="btn btn-dark rounded-0">
+          <h6>LEARN MORE</h6>
+        </button>
+      </div>
+    </div>
+
+    <div class="media container d-flex align-items-center">
+      <div class="media-body">
+        <h3>PLAY A ROUND IN ARUBA</h3>
+        <p>
+          Designed by Robert Trent Jones II, the resort’s 18 holes use wind,
+          earth and sea to create challenges for golfers of all skill levels.
+          Private lessons, clinics, a pro shop, driving range and restaurant are
+          also offered.
+        </p>
+        <button type="button" class="btn btn-dark rounded-0">
+          <h6>LEARN MORE</h6>
+        </button>
+      </div>
+      <img
+        src="https://s7d2.scene7.com/is/image/ritzcarlton/thinkstock_92506939?$LargeViewport42pct$"
+        class="align-self-start pl-5"
+        alt="..."
+        style="width: 54%"
+      />
+    </div>
+
+    <!-- main jumbotron 3 -->
+    <div class="jumbotron jumbotron-fluid my-5">
+      <div class="container">
+        <h3 class="font-weight-normal d-flex justify-content-center">
+          EXPLORING THE ISLANDS
+        </h3>
+        <p class="d-flex justify-content-center pt-3">
+          Expertly crafted itineraries to make the most out of your beach
+          vacation.
+        </p>
+      </div>
+    </div>
+
+    <!-- 		featured destinations cards -->
+    <div class="container pb-5">
+      <h4 class="font-weight-normal mb-4">Featured Destinations</h4>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card rounded-0" style="width: 22rem">
+            <img
+              src="https://s7d2.scene7.com/is/image/ritzcarlton/iStock-466442994?$XlargeViewport100pct$"
+              class="card-img-top rounded-0"
+              alt="..."
+            />
+            <div class="card-body p-0">
+              <div class="carousel-caption">
+                <p class="card-text h6">ARUBA ITINERARIES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card rounded-0" style="width: 22rem">
+            <img
+              src="https://s7d2.scene7.com/is/image/ritzcarlton/RCGNDCA_00136_conversion?$XlargeViewport100pct$"
+              class="card-img-top rounded-0"
+              alt="..."
+            />
+            <div class="card-body p-0">
+              <div class="carousel-caption">
+                <p class="card-text h6">GRAND CAYMAN ITINERARIES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card rounded-0" style="width: 22em">
+            <img
+              src="https://s7d2.scene7.com/is/image/ritzcarlton/iStock-530423522?$XlargeViewport100pct$"
+              class="card-img-top rounded-0"
+              alt="..."
+            />
+            <div class="card-body p-0">
+              <div class="carousel-caption">
+                <p class="card-text h6">CANCUN ITINERARIES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- container ending div -->
+    </div>
+  </div>
+</div>
+
+<div class="startBooking" routerLink="/booking">Start Booking</div>
