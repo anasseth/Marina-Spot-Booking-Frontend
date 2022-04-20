@@ -3,7 +3,12 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { environment } from '../../environments/environment'
-
+import {
+    MatSnackBar,
+    MatSnackBarConfig,
+    MatSnackBarHorizontalPosition,
+    MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Injectable({
     providedIn: 'root'
@@ -12,8 +17,14 @@ export class GlobalService {
     passObject: any;
     isLogin?: boolean;
     headers = new HttpHeaders().set('Content-Type', 'application/json');
+    action: boolean = true;
+    setAutoHide: boolean = true;
+    autoHide: number = 2000;
+    horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+    verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+    addExtraClass: boolean = true;
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, public snackBar: MatSnackBar) { }
 
     postBookingData(Data: any): Observable<any> {
         return this.http.post<any>(environment.apiURL + 'booking/', Data).pipe(catchError(this.error))
@@ -27,8 +38,8 @@ export class GlobalService {
     getProductData(): Observable<any> {
         return this.http.get<any>(environment.apiURL + 'products/').pipe(catchError(this.error))
     }
-    deleteBooking(id:any){
-        return this.http.delete<any>(environment.apiURL + 'booking/'+id).pipe(catchError(this.error)) 
+    deleteBooking(id: any) {
+        return this.http.delete<any>(environment.apiURL + 'booking/' + id).pipe(catchError(this.error))
     }
     updatePassword2(obj: any) {
         return this.http.put<any>(environment.apiURL + 'password/' + this.passObject.id, obj).pipe(catchError(this.error))
@@ -75,6 +86,16 @@ export class GlobalService {
         }
         console.log(errorMessage);
         return throwError(errorMessage);
+    }
+
+    openSnackBar(message: string, action?: string) {
+        var snackBarType = action == "success" ? "success" : "danger"
+        this.snackBar.open(message, undefined, {
+            duration: 4000,
+            verticalPosition: this.verticalPosition,
+            horizontalPosition: this.horizontalPosition,
+            panelClass: snackBarType,
+        });
     }
 
 }

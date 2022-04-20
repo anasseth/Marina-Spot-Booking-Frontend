@@ -28,7 +28,7 @@ h1 {
 
 h4.payment-title {
   text-align: left;
-  padding: 10px 0px 30px 30px;
+  padding: 10px 0px 0px 30px;
   font-weight: 500;
   color: #5e6977;
 }
@@ -226,6 +226,16 @@ label:hover {
   font-size: 11pt;
   color: #5e6977;
 }
+.textarea {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  height: 78px;
+  padding-left: 15px;
+  font-weight: 600;
+  font-size: 11pt;
+  color: #5e6977;
+}
 
 input[type="text"] {
   display: initial;
@@ -331,7 +341,7 @@ p.credit {
 .containerCountryMain {
   width: 100%;
   height: fit-content;
-  background-color: #2b425e;
+  background-color: #022447;
   padding: 50px;
   margin: auto;
   text-align: center;
@@ -339,4 +349,13 @@ p.credit {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.success {
+  background: #069ef7 !important;
+  color: white !important;
+}
+.danger {
+  background: #cc2424 !important;
+  color: white !important;
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbDate, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
-
 @Component({
   selector: 'app-booking',
   templateUrl: './booking.component.html',
@@ -13,8 +12,10 @@ export class BookingComponent implements OnInit {
   hoveredDate: NgbDate | null = null;
   fromDate!: NgbDate;
   toDate: NgbDate | null = null;
-
-
+  countrySelectionActive: boolean = false;
+  marinaSelectionActive: boolean = false;
+  boatSeclectionActive: boolean = false;
+  dateSelectionActive: boolean = true;
   marinasData: any = [
     {
       imageURL: "https://www.marinareservation.com/timthumb.php?src=upload/region/import/shutterstock_103226576.jpg&w=910&h=605&webp=1",
@@ -69,12 +70,8 @@ export class BookingComponent implements OnInit {
     }
   ]
 
-  countrySelectionActive: boolean = false;
-  marinaSelectionActive: boolean = false;
-  boatSeclectionActive: boolean = false;
-  dateSelectionActive: boolean = true;
-
   constructor(
+     
     public _router: Router,
     calendar: NgbCalendar
   ) {
@@ -106,22 +103,28 @@ export class BookingComponent implements OnInit {
   }
 
   saveData(i: any) {
+    var dateFrom: any = new Date(this.fromDate?.month + "/" + this.fromDate?.day + "/" + this.fromDate?.year);
+    var dateTo: any = new Date(this.toDate?.month + "/" + this.toDate?.day + "/" + this.toDate?.year);
+
     this.touringSpot.dateFrom = this.fromDate.day + "/" + this.fromDate.month + "/" + this.fromDate.year
     this.touringSpot.dateTo = this.toDate?.day + "/" + this.toDate?.month + "/" + this.toDate?.year
     this.touringSpot.boat = i
     this.touringSpot.boat.boat_qty = 1
     this.touringSpot.boat.boat_detail = "";
-    this.touringSpot.boat.boat_stay = null;
+    this.touringSpot.boat.boat_stay = (dateTo - dateFrom) / (24 * 60 * 60 * 1000);
     localStorage.setItem('bookingData', JSON.stringify(this.touringSpot))
     this._router.navigate(['/cart'])
   }
 
 
   onDateSelection(date: NgbDate) {
+    console.log(date)
     if (!this.fromDate && !this.toDate) {
       this.fromDate = date;
+      console.log(this.fromDate)
     } else if (this.fromDate && !this.toDate && date.after(this.fromDate)) {
       this.toDate = date;
+      console.log(this.toDate)
     } else {
       this.toDate = null;
       this.fromDate = date;

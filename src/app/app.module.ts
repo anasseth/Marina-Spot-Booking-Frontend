@@ -11,6 +11,12 @@ import { FormsModule } from '@angular/forms';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExampleModule } from './material.module';
+import { NgxPayPalModule } from 'ngx-paypal';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { AboutComponent } from './about/about.component';
+import { NgxStripeModule } from 'ngx-stripe';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BookingComponent,
     CartComponent,
     AdminLoginComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +34,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialExampleModule,
+    NgxPayPalModule,
+    NgxSpinnerModule,
+    NgxStripeModule.forRoot("pk_test_nDR7IWEIGLp4a1SBtqKH5eyg")
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,6 +23,15 @@
                   <span>Admin</span>
                 </a>
                 <a
+                  class="btn d-inline-flex btn-sm btn-success border-base mx-1"
+                  (click)="exportexcel()"
+                >
+                  <span class="pe-2">
+                    <!-- <i class="bi bi-pencil"></i> -->
+                  </span>
+                  <span style="color: white">Export Data</span>
+                </a>
+                <a
                   class="btn d-inline-flex btn-sm btn-danger mx-1"
                   routerLink="/login"
                 >
@@ -43,7 +52,12 @@
     <main class="py-6 bg-surface-secondary">
       <div
         class="container-fluid"
-        style="background-color: #2b425e; height: 100vh"
+        style="
+          background-color: #2b425e;
+          height: 100%;
+          min-height: 100vh;
+          padding-bottom: 100px;
+        "
       >
         <!-- Card stats -->
         <div class="row g-6 mb-6">
@@ -185,7 +199,7 @@
             <h5 class="mb-0">Applications</h5>
           </div>
           <div class="table-responsive">
-            <table class="table table-hover table-nowrap">
+            <table class="table table-hover table-nowrap" id="excel-table">
               <thead class="thead-light">
                 <tr>
                   <th scope="col">Name</th>
@@ -199,9 +213,14 @@
               <tbody>
                 <tr *ngFor="let booking of bookingData; let i = index">
                   <td>
+                    <!-- <img
+                      alt="..."
+                      src="https://picsum.photos/200"
+                      class="avatar avatar-sm rounded-circle me-2"
+                    /> -->
                     <img
                       alt="..."
-                      src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
+                      src="https://source.unsplash.com/random/300x300"
                       class="avatar avatar-sm rounded-circle me-2"
                     />
                     <a class="text-heading font-semibold">{{

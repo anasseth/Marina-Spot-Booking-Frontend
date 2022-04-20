@@ -16,7 +16,7 @@ export class AdminLoginComponent implements OnInit {
   isLogin: boolean = true;
   isChangePassword: boolean = false;
 
-  constructor(public router: Router, public global:GlobalService) { }
+  constructor(public router: Router, public global: GlobalService) { }
 
   ngOnInit(): void {
     this.global.getIDpass().subscribe(
@@ -39,18 +39,22 @@ export class AdminLoginComponent implements OnInit {
     if (this.isLogin) {
       if ((this.email != undefined || this.email != null) && (this.password != undefined || this.password != null)) {
         if ((this.email.toLowerCase() == this.adminCredentials.name) && (this.password == this.adminCredentials.password)) {
-          alert("Login Successful")
+          // alert("Login Successful")
+          this.openSnackBar("Login Successful", "success")
           this.router.navigate(["/admin"])
           this.global.isLogin = true
+          localStorage.setItem("isLogin", JSON.stringify(this.global.isLogin))
         }
         else {
-          alert("Email or Password is Incorrect")
+          // alert("Email or Password is Incorrect")
+          this.openSnackBar("Email or Password is Incorrect", "danger")
           console.log(this.email)
           console.log(this.password)
         }
       }
       else {
-        alert("Email or Password is Empty")
+        // alert("Email or Password is Empty")
+        this.openSnackBar("Email or Password is Empty", "danger")
       }
     }
     else if (this.isChangePassword) {
@@ -60,6 +64,10 @@ export class AdminLoginComponent implements OnInit {
       }
       // this.global.updatePassword(obj)
     }
+  }
+
+  openSnackBar(message: string, action?: string) {
+    this.global.openSnackBar(message, action)
   }
 
 }

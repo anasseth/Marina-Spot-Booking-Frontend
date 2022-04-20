@@ -83,7 +83,7 @@
 .containerCountry {
   width: 100%;
   height: fit-content;
-  background-color: #2b425e;
+  background-color: #022447;
   padding: 50px;
   margin: auto;
   text-align: center;
@@ -106,7 +106,7 @@ body {
   justify-content: center;
   height: 100vh;
   align-items: center;
-  background-color: #2b425e;
+  background-color: #022447;
   color: #dbe4ee;
 }
 
@@ -117,7 +117,7 @@ body {
 .containerCountryMain {
   width: 100%;
   height: fit-content;
-  background-color: #2b425e;
+  background-color: #022447;
   padding: 50px;
   margin: auto;
   text-align: center;
@@ -194,13 +194,14 @@ body {
   transition: all var(--animation-time) linear;
   color: white;
   opacity: 0;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-p {
-  font-size: 0.9rem;
+  h4 {
+    font-size: 1.25rem;
+    color: white;
+  }
+  p {
+    font-size: 0.9rem;
+    color: white;
+  }
 }
 
 .card.active .detail {
@@ -229,7 +230,7 @@ p {
 }
 
 i {
-  color: #2b425e;
+  color: #022447;
 }
 
 .custom-day {
