@@ -1,649 +1,3 @@
-<!-- <div>
-  <div
-    class="alert alert-dark alert-dismissible fade show font-weight-bold"
-    role="alert"
-  >
-    <ul class="nav d-flex justify-content-center">
-      <li class="alert-nav-item">
-        <a class="nav-link active"> Travel with confidence during COVID-19: </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active">Best Rate Guarantee</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">Flexible Cancellation</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">Committed to Clean</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" tabindex="-1" aria-disabled="true"
-          >Contactless Serivces</a
-        >
-      </li>
-    </ul>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand col-4" target="_blank">
-      <img
-        class="c-image"
-        alt=""
-        itemprop="logo"
-        itemscope="itemscope"
-        src="../../assets/logo.png"
-        style="height: 81px"
-        class="img-fluid"
-      />
-    </a>
-
-    <ul class="navbar-nav w-100 col-7.5 row d-flex justify-content-end pr-2">
-      <div class="dropdown">
-        <li>
-          <button
-            class="btn btn-secondary dropdown-toggle h6 bg-white text-dark"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            ENGLISH
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item">DEUTSCH</a>
-            <a class="dropdown-item">ESPANOL</a>
-            <a class="dropdown-item">PORTUGUES</a>
-          </div>
-        </li>
-      </div>
-
-      <li>
-        <a class="nav-link text-15 h6" (click)="routeToAmdminPanel()">ADMIN</a>
-      </li>
-      <ul class="navbar-nav w-100 col-7.5 row-2 d-flex justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link h6">YACHTS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h6">MARINAS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h6">RESIDENCES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h6 border">RESERVE NOW</a>
-        </li>
-      </ul>
-    </ul>
-  </nav>
-
-  <div
-    id="carouselExampleIndicators"
-    class="carousel slide"
-    data-ride="carousel"
-  >
-    <div class="carousel-inner" style="height: 700px">
-      <div class="carousel-item active">
-        <img
-          src="https://s7d2.scene7.com/is/image/ritzcarlton/RCCANCU_00365_conversion?$XlargeViewport100pct$"
-          class="d-block w-100"
-          alt="..."
-        />
-        <div class="carousel-caption">
-          <p class="text-dark"></p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img
-          src="https://s7d2.scene7.com/is/image/ritzcarlton/RCGNDCA_00179_conversion?$XlargeViewport100pct$"
-          class="d-block w-100"
-          alt="https://s7d2.scene7.com/is/image/ritzcarlton/RCARUBA_00058_conversion?$XlargeViewport100pct$"
-        />
-        <div class="carousel-caption">
-          <p>Gallions Point, Greater London</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img
-          src="https://s7d2.scene7.com/is/image/ritzcarlton/RCARUBA_00058_conversion?$XlargeViewport100pct$"
-          class="d-block w-100"
-          alt="..."
-        />
-        <div class="carousel-caption">
-          <p>South Dock, Greater London.</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img
-          src="https://s7d2.scene7.com/is/image/ritzcarlton/StThomas-PerfectWeekend1?$XlargeViewport100pct$"
-          class="d-block w-100"
-          alt="..."
-        />
-        <div class="carousel-caption">
-          <p class="text-light">Howth Yacht Club and Marina. Howth, Dublin</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img
-          src="https://s7d2.scene7.com/is/image/ritzcarlton/50505124-5SJDZR_ZadunPool-1?$XlargeViewport100pct$"
-          class="d-block w-100"
-          alt="..."
-        />
-        <div class="carousel-caption">
-          <p>Ballydavid Pier. Ballydavid</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img
-          src="https://s7d2.scene7.com/is/image/ritzcarlton/Mexico_City_Midnight_Supper_0051?$XlargeViewport100pct$"
-          class="d-block w-100"
-          alt="..."
-        />
-        <div class="carousel-caption">
-          <p>South Dock, Greater London.</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img
-          src="https://s7d2.scene7.com/is/image/ritzcarlton/07_Girl_Tree_2201_39L?$XlargeViewport100pct$"
-          class="d-block w-100"
-          alt="..."
-        />
-        <div class="carousel-caption">
-          <p class="text-light">Ballydavid Pier. Ballydavid</p>
-        </div>
-      </div>
-    </div>
-    <a
-      class="carousel-control-prev"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a
-      class="carousel-control-next"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-
-  <div class="jumbotron jumbotron-fluid bg-dark mh-50">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          <ul class="list-group">
-            <div class="input-group mb-3 border-bottom">
-              <input
-                type="text"
-                class="form-control bg-dark border-dark"
-                placeholder="Choose Location"
-                aria-label="Choose Location"
-                aria-describedby="basic-addon2"
-              />
-              <div class="input-group-append">
-                <span
-                  class="input-group-text bg-dark border-dark"
-                  id="basic-addon2"
-                ></span>
-              </div>
-            </div>
-
-            <div class="containter">
-              <div class="row">
-                <div
-                  class="mb-2 dropdown btn-block col-sm d-flex justify-content-start"
-                >
-                  <button
-                    class="btn btn-secondary dropdown-toggle col-sm bg-dark text-light border-bottom"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    1 Spot
-                  </button>
-                </div>
-
-                <div
-                  class="mb-2 dropdown btn-block col-sm d-flex justify-content-start"
-                >
-                  <button
-                    class="btn btn-secondary dropdown-toggle col-sm bg-dark text-light border-bottom"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    2 Person
-                  </button>
-                </div>
-              </div>
-
-              <div class="input-group mb-3 border-bottom">
-                <input
-                  type="text"
-                  class="form-control bg-dark border-dark"
-                  placeholder="Enter Code (optional)"
-                  aria-label="Enter Code (optional)"
-                  aria-describedby="basic-addon2"
-                />
-                <div class="input-group-append">
-                  <span
-                    class="input-group-text bg-dark border-dark"
-                    id="basic-addon2"
-                  ></span>
-                </div>
-              </div>
-            </div>
-          </ul>
-        </div>
-
-        <div class="col-sm">
-          <ul class="list-group">
-            <div class="input-group mb-3 border-bottom">
-              <input
-                type="text"
-                class="form-control bg-dark border-dark"
-                placeholder="Oct 7, 2020 - Oct 8, 2020"
-                aria-label="Oct 7, 2020 - Oct 8, 2020"
-                aria-describedby="basic-addon2"
-              />
-              <div class="input-group-append">
-                <span
-                  class="input-group-text bg-dark border-dark"
-                  id="basic-addon2"
-                ></span>
-              </div>
-            </div>
-            <li class="list-group-item disabled bg-dark" aria-disabled="true">
-              <div class="form-check bg-dark">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >MY DATES ARE FLEXIBLE</label
-                >
-              </div>
-            </li>
-
-            <li class="list-group-item disabled bg-dark" aria-disabled="true">
-              <div class="form-check bg-dark">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >USE MY REWARDS POINTS</label
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm">
-          <ul class="list-group">
-            <button type="button" class="btn btn-info rounded-0 text-dark">
-              CHECK AVAILABILITY
-            </button>
-
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div
-    class="jumbotron jumbotron-fluid mt-5"
-    style="
-      box-shadow: 3px -1px 30px 0px rgba(80, 191, 227, 0.75);
-      -webkit-box-shadow: 3px -1px 30px 0px rgba(80, 191, 227, 0.75);
-      -moz-box-shadow: 3px -1px 30px 0px rgba(80, 191, 227, 0.75);
-    "
-  >
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <h1>ISLAND-INSPIRED LUXURY</h1>
-        </div>
-        <div class="col-7">
-          <p class="pl-5">
-            With its turquoise blue water, diverse ecosystem, warm breezes, rich
-            history and soft-sand beaches, the Caribbean is a destination for
-            seekers of both adventure and escape. Blending elegance with island
-            living, The Ritz-Carlton offers a collection of hotels and resorts
-            where guests can balance a day of watersports and golf with spa
-            treatments and poolside lounging.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <h3 class="d-flex justify-content-center font-weight-normal mb-4">
-      POPULAR MARINAS IN ADIATRIC
-    </h3>
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="card rounded-0" style="width: 22rem">
-          <img
-            src="https://s3-eu-west-1.amazonaws.com/zalinga/photos/800x600/111830d2-c05e-450b-b893-259332e8f91d/smallpicture.jpg"
-            class="card-img-top rounded-0"
-            alt="..."
-            style="height: 200px"
-          />
-          <div class="card-body">
-            <p class="card-text h6">
-              <img
-                src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-boat-beach-wanicon-flat-wanicon.png"
-              />
-              ACI Marinas
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="card rounded-0" style="width: 22rem">
-          <img
-            src="https://s3-eu-west-1.amazonaws.com/zalinga/800x600/1dd35f06-e284-478a-9865-664d791d2bab.jpg"
-            class="card-img-top rounded-0"
-            alt="..."
-            style="height: 200px"
-          />
-          <div class="card-body">
-            <p class="card-text h6">
-              <img
-                src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-boat-beach-wanicon-flat-wanicon.png"
-              />
-              ACI Marina Milnas
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="card rounded-0" style="width: 22em">
-          <img
-            src="https://s3-eu-west-1.amazonaws.com/zalinga/800x600/be22c5cc-6eae-488c-b4b1-1f6c1f9759b5.jpg"
-            class="card-img-top rounded-0"
-            alt="..."
-            style="height: 200px"
-          />
-          <div class="card-body">
-            <p class="card-text h6">
-              <img
-                src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-boat-beach-wanicon-flat-wanicon.png"
-              />
-              MARINA VLASKA
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-  <div class="media container my-5">
-    <div class="media-body">
-      <h6 class="mt-0">RITZ KIDS</h6>
-      <h1>FAMILY-FRIENDLY CARIBBEAN VACATIONS</h1>
-      <p>
-        The Ritz Kids program encourages young guests to explore a destination’s
-        landscape and wildlife through fun, interactive experiences. In the
-        Caribbean, activities include stargazing in Puerto Rico and nighttime
-        snorkeling in Grand Cayman.
-      </p>
-      <button type="button" class="btn btn-dark rounded-0">
-        <h6>LEARN MORE</h6>
-      </button>
-    </div>
-    <img
-      src="https://s7d2.scene7.com/is/image/ritzcarlton/RCGNDCA_00302_conversion?$XlargeViewport100pct$"
-      class="align-self-start pl-5"
-      alt="..."
-      style="width: 75%"
-    />
-  </div>
-
-  <div class="container">
-    <h3 class="d-flex justify-content-center font-weight-normal mb-4">
-      NEW & UPCOMING DESTINATIONS
-    </h3>
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="card rounded-0" style="width: 22rem">
-          <img
-            src="https://s3-eu-west-1.amazonaws.com/zalinga/photos/800x600/c1467e29-b0a0-4c9e-80ee-1c64aa7bfbd5/smallpicture.jpg"
-            class="card-img-top rounded-0"
-            alt="..."
-            style="height: 200px"
-          />
-          <div class="card-body">
-            <p class="card-text h6">
-              <img src="https://img.icons8.com/color/48/000000/turkey.png" />
-              TURKEY
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="card rounded-0" style="width: 22rem">
-          <img
-            src="https://s3-eu-west-1.amazonaws.com/zalinga/photos/800x600/16353022-f53b-440b-935d-17fe40be5b65/smallpicture.jpg"
-            class="card-img-top rounded-0"
-            alt="..."
-            style="height: 200px"
-          />
-          <div class="card-body">
-            <p class="card-text h6">
-              <img src="https://img.icons8.com/color/48/000000/germany.png" />
-              GERMANY
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="card rounded-0" style="width: 22em">
-          <img
-            src="https://s3-eu-west-1.amazonaws.com/zalinga/photos/800x600/3af63782-0668-4bc7-8891-381e1a536267/smallpicture.jpg"
-            class="card-img-top rounded-0"
-            alt="..."
-            style="height: 200px"
-          />
-          <div class="card-body">
-            <p class="card-text h6">
-              <img src="https://img.icons8.com/color/48/000000/austria.png" />
-              AUSTRIA
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jumbotron jumbotron-fluid my-5">
-      <div class="container">
-        <h3 class="font-weight-normal d-flex justify-content-center">
-          BEYOND BEACHES
-        </h3>
-        <p class="d-flex justify-content-center pt-3">
-          Island experiences that take you out of the water.
-        </p>
-      </div>
-    </div>
-
-    <div class="media container d-flex align-items-center">
-      <img
-        src="https://s7d2.scene7.com/is/image/ritzcarlton/RCCANCU_00382_conversion?$LargeViewport42pct$"
-        class="align-self-start pr-5"
-        alt="..."
-        style="width: 55%"
-      />
-      <div class="media-body">
-        <h3>DINE WITH THE CHEF IN CANCUN</h3>
-        <p>
-          Join resort chefs in the Culinary Center to learn the secrets behind
-          Mexican and Italian cuisines. Hands-on classes are offered throughout
-          the week, and meals are paired with craft cocktails and wine. Kids
-          classes are also available.
-        </p>
-        <button type="button" class="btn btn-dark rounded-0">
-          <h6>LEARN MORE</h6>
-        </button>
-      </div>
-    </div>
-
-    <div class="media container d-flex align-items-center">
-      <div class="media-body">
-        <h3>SET SAIL IN GRAND CAYMAN</h3>
-        <p>
-          Discover historical shipwrecks, colorful coral reefs and an array of
-          marine life aboard a state-of-the-art hydrofoil boat. A six-foot,
-          curved-glass dome magnifies everything under the sea to twice its
-          size.
-        </p>
-        <button type="button" class="btn btn-dark rounded-0">
-          <h6>LEARN MORE</h6>
-        </button>
-      </div>
-      <img
-        src="https://s7d2.scene7.com/is/image/ritzcarlton/GrandCayman2018-33?$LargeViewport42pct$"
-        class="align-self-start pl-5"
-        alt="..."
-        style="width: 54%"
-      />
-    </div>
-
-    <div class="media container d-flex align-items-center">
-      <img
-        src="https://s7d2.scene7.com/is/image/ritzcarlton/RCDORAD_00259_conversion?$LargeViewport42pct$"
-        class="align-self-start pr-5"
-        alt="..."
-        style="width: 55%"
-      />
-      <div class="media-body">
-        <h3>TAKE A HIKE IN DORADO BEACH</h3>
-        <p>
-          Amid the resort’s 50 acres, the 11-mile Rockefeller Nature Trail can
-          be explored by bike, foot or golf cart and offers a changing landscape
-          that takes in the Atlantic Ocean, tree-shaded forests and two golf
-          courses.
-        </p>
-        <button type="button" class="btn btn-dark rounded-0">
-          <h6>LEARN MORE</h6>
-        </button>
-      </div>
-    </div>
-
-    <div class="media container d-flex align-items-center">
-      <div class="media-body">
-        <h3>PLAY A ROUND IN ARUBA</h3>
-        <p>
-          Designed by Robert Trent Jones II, the resort’s 18 holes use wind,
-          earth and sea to create challenges for golfers of all skill levels.
-          Private lessons, clinics, a pro shop, driving range and restaurant are
-          also offered.
-        </p>
-        <button type="button" class="btn btn-dark rounded-0">
-          <h6>LEARN MORE</h6>
-        </button>
-      </div>
-      <img
-        src="https://s7d2.scene7.com/is/image/ritzcarlton/thinkstock_92506939?$LargeViewport42pct$"
-        class="align-self-start pl-5"
-        alt="..."
-        style="width: 54%"
-      />
-    </div>
-
-    <div class="jumbotron jumbotron-fluid my-5">
-      <div class="container">
-        <h3 class="font-weight-normal d-flex justify-content-center">
-          EXPLORING THE ISLANDS
-        </h3>
-        <p class="d-flex justify-content-center pt-3">
-          Expertly crafted itineraries to make the most out of your beach
-          vacation.
-        </p>
-      </div>
-    </div>
-
-    <div class="container pb-5">
-      <h4 class="font-weight-normal mb-4">Featured Destinations</h4>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card rounded-0" style="width: 22rem">
-            <img
-              src="https://s7d2.scene7.com/is/image/ritzcarlton/iStock-466442994?$XlargeViewport100pct$"
-              class="card-img-top rounded-0"
-              alt="..."
-            />
-            <div class="card-body p-0">
-              <div class="carousel-caption">
-                <p class="card-text h6">ARUBA ITINERARIES</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="card rounded-0" style="width: 22rem">
-            <img
-              src="https://s7d2.scene7.com/is/image/ritzcarlton/RCGNDCA_00136_conversion?$XlargeViewport100pct$"
-              class="card-img-top rounded-0"
-              alt="..."
-            />
-            <div class="card-body p-0">
-              <div class="carousel-caption">
-                <p class="card-text h6">GRAND CAYMAN ITINERARIES</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="card rounded-0" style="width: 22em">
-            <img
-              src="https://s7d2.scene7.com/is/image/ritzcarlton/iStock-530423522?$XlargeViewport100pct$"
-              class="card-img-top rounded-0"
-              alt="..."
-            />
-            <div class="card-body p-0">
-              <div class="carousel-caption">
-                <p class="card-text h6">CANCUN ITINERARIES</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div> -->
 <div class="boxed_wrapper ltr">
   <div class="preloader"></div>
 
@@ -663,16 +17,21 @@
     <!--Start Header upper -->
     <div class="header-upper">
       <div class="container-box clearfix">
-        <div class="outer-box clearfix">
-          <div class="header-upper-left float-left clearfix">
+        <div class="outer-box clearfix" style="height: 80px">
+          <div
+            class="header-upper-left float-left clearfix"
+            style="height: 80px"
+          >
             <div class="logo" style="padding: 0px !important">
-              <a
+              <a style="color: white; font-size: 30px"
                 ><img
                   src="../../assets/logo.png"
                   alt="Awesome Logo"
                   title=""
-                  style="width: 150px"
-              /></a>
+                  style="width: 100px"
+                />
+                Travenzia</a
+              >
             </div>
           </div>
           <div class="header-upper-middle float-left clearfix">
@@ -704,15 +63,6 @@
                     </li>
                     <li><a routerLink="/about">About</a></li>
                     <li><a>Services</a></li>
-                    <li class="dropdown">
-                      <a>Our Yachts</a>
-                      <ul>
-                        <li><a>Our Yachts</a></li>
-                        <li>
-                          <a>Yachts Details</a>
-                        </li>
-                      </ul>
-                    </li>
                     <li><a>Destinations</a></li>
                     <li class="dropdown">
                       <a>News</a>
@@ -772,8 +122,8 @@
           <div class="header-lawer-left float-left">
             <ul class="clearfix">
               <li>
-                <span class="flaticon-pin"></span><b>Address:</b> 66 Broklyn St.
-                New York
+                <span class="flaticon-pin"></span><b>Address:</b> Belfast
+                Northern Ireland
               </li>
               <li>
                 <span class="flaticon-mail"></span><b>Email:</b>
@@ -815,17 +165,19 @@
     <!--End header lawer -->
 
     <!--Sticky Header-->
-    <div class="sticky-header">
+    <div class="sticky-header" style="height: 120px">
       <div class="container">
         <div class="clearfix">
           <!--Logo-->
-          <div class="logo float-left">
-            <a class="img-responsive"
+          <div class="logo float-left" style="padding: 0px !important">
+            <a style="color: white; font-size: 30px" class="img-responsive"
               ><img
-                src="../../assets/images/resources/logo.png"
+                src="../../assets/logo.png"
                 alt=""
                 title=""
-            /></a>
+                style="width: 100px"
+              />Travenzia</a
+            >
           </div>
           <!--Right Col-->
           <div class="right-col float-right">
@@ -878,90 +230,34 @@
     <!-- End Mobile Menu -->
   </header>
 
-  <!-- Start Main Slider -->
-  <section class="main-slider style1">
-    <div class="slider-box">
-      <!-- Banner Carousel -->
-      <div class="banner-carousel owl-theme owl-carousel text-center">
-        <!-- Slide -->
-        <div class="slide">
-          <div
-            class="image-layer"
-            style="background-image: url(../../assets/images/slides/v1-1.jpg)"
-          ></div>
-          <div class="auto-container">
-            <div class="content">
-              <div class="icon">
-                <img
-                  src="../../assets/images/icon/jikjak.png"
-                  alt="Awesome Image"
-                />
-              </div>
-              <div class="text">Welcome to Travenzia</div>
-              <div class="big-title">
-                The Ultimate<br />
-                Marina Spot <span class="thm-clr1">Experience</span>
-              </div>
-              <div class="btn-box">
-                <a>Discover More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide -->
-        <div class="slide">
-          <div
-            class="image-layer"
-            style="background-image: url(../../assets/images/slides/v1-2.jpg)"
-          ></div>
-          <div class="auto-container">
-            <div class="content">
-              <div class="icon">
-                <img
-                  src="../../assets/images/icon/jikjak.png"
-                  alt="Awesome Image"
-                />
-              </div>
-              <div class="text">Welcome to Travenzia</div>
-              <div class="big-title">
-                The Ultimate<br />
-                Marina Spot <span class="thm-clr1">Experience</span>
-              </div>
-              <div class="btn-box">
-                <a>Discover More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide -->
-        <div class="slide">
-          <div
-            class="image-layer"
-            style="background-image: url(../../assets/images/slides/v1-3.jpg)"
-          ></div>
-          <div class="auto-container">
-            <div class="content">
-              <div class="icon">
-                <img
-                  src="../../assets/images/icon/jikjak.png"
-                  alt="Awesome Image"
-                />
-              </div>
-              <div class="text">Welcome to Tranvenzia</div>
-              <div class="big-title">
-                The Ultimate<br />
-                Marina Spot <span class="thm-clr1">Experience</span>
-              </div>
-              <div class="btn-box">
-                <a>Discover More</a>
-              </div>
+  <!--Start Discover Area-->
+  <section
+    class="discover-area"
+    style="
+      background-image: url(../../assets/images/parallax-background/discover-bg.jpg);
+    "
+  >
+    <div class="icon-holder">
+      <img src="../../assets/images/icon/big-icon-1.png" alt="Icon" />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="discover-content text-center">
+            <p>Best destinations available online</p>
+            <h1>
+              Tranvenzia is a World Leading<br />
+              Online Marina Spot Booking Platform
+            </h1>
+            <div class="button">
+              <a class="btn-one">Discover More</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Main Slider -->
+  <!--End Discover Area-->
 
   <!--Start About Style1 Area-->
   <section class="about-style1-area">
@@ -985,7 +281,10 @@
             </ul>
             <div class="text-holder">
               <span>About Tranvenzia</span>
-              <h1>Welcome to Marina Spot Booking Platform</h1>
+              <h1>
+                Welcome to <br />
+                Tranvenzia
+              </h1>
               <p>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have in some form by injected humour randomised
@@ -1083,7 +382,7 @@
               <div class="icon"><span class="flaticon-boat"></span></div>
             </div>
             <div class="title">
-              <h3>yachts</h3>
+              <h3>Boats</h3>
             </div>
           </div>
         </div>
@@ -1109,7 +408,7 @@
               <div class="icon"><span class="flaticon-beach"></span></div>
             </div>
             <div class="title">
-              <h3>destination</h3>
+              <h3>Destination</h3>
             </div>
           </div>
         </div>
@@ -1161,7 +460,7 @@
               <div class="icon"><span class="flaticon-sailor"></span></div>
             </div>
             <div class="title">
-              <h3>skippers</h3>
+              <h3>Customers</h3>
             </div>
           </div>
         </div>
@@ -1313,6 +612,223 @@
   </section>
   <!--End Slogan Area-->
 
+  <!--Start Destinations Area-->
+  <section class="destinations-area">
+    <div class="auto-container-box">
+      <div class="sec-title black text-center">
+        <div class="icon"><span class="flaticon-rudder"></span></div>
+        <p>Have a look at our</p>
+        <div class="big-title black"><h1>Popular Marina Spot</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <!--Start Single Destinations Box-->
+          <div class="single-destination-box">
+            <div class="img-holder">
+              <div class="inner">
+                <img
+                  src="../../assets/images/resources/destination-1.jpg"
+                  alt="Awesome Image"
+                />
+                <div class="overlay-title">
+                  <h1><a>Bangor Marina</a></h1>
+                  <!-- <p>780 Boats</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Destinations Box-->
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <!--Start Single Destinations Box-->
+          <div class="single-destination-box">
+            <div class="img-holder">
+              <div class="inner">
+                <img
+                  src="../../assets/images/resources/destination-2.jpg"
+                  alt="Awesome Image"
+                />
+                <div class="overlay-title">
+                  <h1><a>Lough Swilly Marina</a></h1>
+                  <!-- <p>846 Boats</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Destinations Box-->
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <!--Start Single Destinations Box-->
+          <div class="single-destination-box">
+            <div class="img-holder">
+              <div class="inner">
+                <img
+                  src="../../assets/images/resources/destination-3.jpg"
+                  alt="Awesome Image"
+                />
+                <div class="overlay-title">
+                  <h1><a>Foyle Port Marina</a></h1>
+                  <!-- <p>438 Boats</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Destinations Box-->
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <!--Start Single Destinations Box-->
+          <div class="single-destination-box">
+            <div class="img-holder">
+              <div class="inner">
+                <img
+                  src="../../assets/images/resources/destination-4.jpg"
+                  alt="Awesome Image"
+                />
+                <div class="overlay-title">
+                  <h1><a>Rathlin Island</a></h1>
+                  <!-- <p>349 Boats</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Destinations Box-->
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <!--Start Single Destinations Box-->
+          <div class="single-destination-box">
+            <div class="img-holder">
+              <div class="inner">
+                <img
+                  src="https://i.pinimg.com/originals/42/fb/b6/42fbb6c02248fe28f2504f019b65c93d.jpg"
+                  alt="Awesome Image"
+                  style="max-height: 470px; object-fit: cover"
+                />
+                <div class="overlay-title">
+                  <h1><a>Gallions Point</a></h1>
+                  <!-- <p>349 Boats</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Destinations Box-->
+        </div>
+
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <!--Start Single Destinations Box-->
+          <div class="single-destination-box">
+            <div class="img-holder">
+              <div class="inner">
+                <img
+                  src="https://www.fueledbywanderlust.com/wp-content/uploads/2019/10/2-days-in-cinque-terre-23-370x480.jpg"
+                  alt="Awesome Image"
+                  style="max-height: 470px; object-fit: cover"
+                />
+                <div class="overlay-title">
+                  <h1><a>South Dock</a></h1>
+                  <!-- <p>349 Boats</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Destinations Box-->
+        </div>
+
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <!--Start Single Destinations Box-->
+          <div class="single-destination-box">
+            <div class="img-holder">
+              <div class="inner">
+                <img
+                  src="../../assets/images/resources/Cliffs-of-Moher.jpg"
+                  alt="Awesome Image"
+                  style="max-height: 470px; object-fit: cover"
+                />
+                <div class="overlay-title">
+                  <h1><a>Cliffs of Moher</a></h1>
+                  <!-- <p>349 Boats</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Destinations Box-->
+        </div>
+
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <!--Start Single Destinations Box-->
+          <div class="single-destination-box">
+            <div class="img-holder">
+              <div class="inner">
+                <img
+                  src="../../assets/images/resources/Cork-Ireland (1).jpg"
+                  alt="Awesome Image"
+                />
+                <div class="overlay-title">
+                  <h1><a>Cork Ireland</a></h1>
+                  <!-- <p>349 Boats</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Destinations Box-->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End Destinations Area-->
+
+  <!-- Start Boat Area-->
+  <!-- <section class="boat-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="boat-content-box">
+            <div class="sec-title black">
+              <div class="icon"><span class="flaticon-rudder"></span></div>
+              <p>Checkout all boats</p>
+              <div class="big-title black">
+                <h1>
+                  Explore Our Boat<br />
+                  Types
+                </h1>
+              </div>
+            </div>
+            <div class="inner-content-box">
+              <p>
+                There are many variations of passages of lorem ipsum available,
+                but the majority have in some form by randomised words which
+                don't look even slightly believable quis nostrud exercitation
+                ullamco laboris nisi ut aliquip.
+              </p>
+              <ul>
+                <li>
+                  <span class="flaticon-boat-2"></span>
+                  <h3>Sailing Boat</h3>
+                </li>
+                <li>
+                  <span class="flaticon-catamaran"></span>
+                  <h3>Catamaran</h3>
+                </li>
+                <li>
+                  <span class="flaticon-boat-3"></span>
+                  <h3>Power Boat</h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6">
+          <div class="boat-image-box">
+            <img
+              src="../../assets/images/resources/boat-image.jpg"
+              alt="Awesome Image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--End Boat Area -->
   <!--Start Testimonial Area -->
   <section class="testimonial-area">
     <div class="container">
@@ -1408,218 +924,6 @@
     </div>
   </section>
   <!--End Testimonial Area-->
-
-  <!--Start Discover Area-->
-  <section
-    class="discover-area"
-    style="
-      background-image: url(../../assets/images/parallax-background/discover-bg.jpg);
-    "
-  >
-    <div class="icon-holder">
-      <img src="../../assets/images/icon/big-icon-1.png" alt="Icon" />
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="discover-content text-center">
-            <p>Best destinations available online</p>
-            <h1>
-              Tranvenzia is a World Leading<br />
-              Online Marina Spot Booking Platform
-            </h1>
-            <div class="button">
-              <a class="btn-one">Discover More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--End Discover Area-->
-
-  <!--Start Benefits Area-->
-  <section class="benefits-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="benefits-content">
-            <ul>
-              <li>
-                <div class="icon-holder thm_bgclr2">
-                  <span class="flaticon-boat-2"></span>
-                </div>
-                <h3>
-                  22,375 boats in the best<br />
-                  travel destinations
-                </h3>
-              </li>
-              <li>
-                <div class="icon-holder thm_bgclr2">
-                  <span class="flaticon-stamp"></span>
-                </div>
-                <h3>
-                  22,375 boats in the best<br />
-                  travel destinations
-                </h3>
-              </li>
-              <li>
-                <div class="icon-holder thm_bgclr2">
-                  <span class="flaticon-sailor"></span>
-                </div>
-                <h3>
-                  22,375 boats in the best<br />
-                  travel destinations
-                </h3>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--End Benefits Area-->
-
-  <!--Start Destinations Area-->
-  <section class="destinations-area">
-    <div class="auto-container-box">
-      <div class="sec-title black text-center">
-        <div class="icon"><span class="flaticon-rudder"></span></div>
-        <p>Have a look at our</p>
-        <div class="big-title black"><h1>Popular Destinations</h1></div>
-      </div>
-      <div class="row">
-        <div class="col-xl-3 col-lg-6 col-md-6">
-          <!--Start Single Destinations Box-->
-          <div class="single-destination-box">
-            <div class="img-holder">
-              <div class="inner">
-                <img
-                  src="../../assets/images/resources/destination-1.jpg"
-                  alt="Awesome Image"
-                />
-                <div class="overlay-title">
-                  <h1><a>Bangor Marina</a></h1>
-                  <p>780 Boats</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--End Single Destinations Box-->
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-6">
-          <!--Start Single Destinations Box-->
-          <div class="single-destination-box">
-            <div class="img-holder">
-              <div class="inner">
-                <img
-                  src="../../assets/images/resources/destination-2.jpg"
-                  alt="Awesome Image"
-                />
-                <div class="overlay-title">
-                  <h1><a>Lough Swilly Marina</a></h1>
-                  <p>846 Boats</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--End Single Destinations Box-->
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-6">
-          <!--Start Single Destinations Box-->
-          <div class="single-destination-box">
-            <div class="img-holder">
-              <div class="inner">
-                <img
-                  src="../../assets/images/resources/destination-3.jpg"
-                  alt="Awesome Image"
-                />
-                <div class="overlay-title">
-                  <h1><a>Foyle Port Marina</a></h1>
-                  <p>438 Boats</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--End Single Destinations Box-->
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-6">
-          <!--Start Single Destinations Box-->
-          <div class="single-destination-box">
-            <div class="img-holder">
-              <div class="inner">
-                <img
-                  src="../../assets/images/resources/destination-4.jpg"
-                  alt="Awesome Image"
-                />
-                <div class="overlay-title">
-                  <h1><a>Rathlin Island</a></h1>
-                  <p>349 Boats</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--End Single Destinations Box-->
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--End Destinations Area-->
-
-  <!--Start Boat Area-->
-  <section class="boat-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-6">
-          <div class="boat-content-box">
-            <div class="sec-title black">
-              <div class="icon"><span class="flaticon-rudder"></span></div>
-              <p>Checkout all boats</p>
-              <div class="big-title black">
-                <h1>
-                  Explore Our Boat<br />
-                  Types
-                </h1>
-              </div>
-            </div>
-            <div class="inner-content-box">
-              <p>
-                There are many variations of passages of lorem ipsum available,
-                but the majority have in some form by randomised words which
-                don't look even slightly believable quis nostrud exercitation
-                ullamco laboris nisi ut aliquip.
-              </p>
-              <ul>
-                <li>
-                  <span class="flaticon-boat-2"></span>
-                  <h3>Sailing Boat</h3>
-                </li>
-                <li>
-                  <span class="flaticon-catamaran"></span>
-                  <h3>Catamaran</h3>
-                </li>
-                <li>
-                  <span class="flaticon-boat-3"></span>
-                  <h3>Power Boat</h3>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-6">
-          <div class="boat-image-box">
-            <img
-              src="../../assets/images/resources/boat-image.jpg"
-              alt="Awesome Image"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--End Boat Area-->
-
   <!--Start latest blog area -->
   <section class="latest-blog-area">
     <div class="icon-holder">
@@ -1891,9 +1195,9 @@
                 <div class="row">
                   <div class="col-xl-6 col-lg-6 col-md-6">
                     <ul class="explore-links">
-                      <li><a>About Yacher Group</a></li>
+                      <li><a>About TranvenziaGroup</a></li>
                       <li><a>Destinations</a></li>
-                      <li><a>Meet the Team</a></li>
+                      <!-- <li><a>Meet the Team</a></li> -->
                       <li><a>Our Pricings</a></li>
                       <li><a>Latest News</a></li>
                       <li><a>Online Booking</a></li>
@@ -1922,18 +1226,18 @@
             <div class="single-footer-widget martop50">
               <div class="footer-contact-info-box">
                 <div class="footer-logo">
-                  <a
+                  <a style="color: white; font-size: 30px"
                     ><img
-                      src="../../assets/images/resources/logo.png"
+                      src="../../assets/logo.png"
                       alt="Awesome Logo"
                       title="Logo"
-                  /></a>
+                      style="width: 100px"
+                    />Travenzia</a
+                  >
                 </div>
-                <p>
-                  660 Broklyn Street, New Town<br />
-                  New York, United States
-                </p>
-                <a href="mailto:info@templatepath.com">needhelp@yacher.com</a
+                <p>Belfast Northern Ireland</p>
+                <a href="mailto:info@templatepath.com"
+                  >marina.spot.booking@gmail.com</a
                 ><br />
                 <a href="tel:6668880000">666 888 0000</a>
                 <div class="footer-social-links">
@@ -1965,16 +1269,12 @@
       <div class="container">
         <div class="outer-box">
           <div class="copyright-text">
-            <p>© Copyright 2020 by <a>Yacher</a></p>
+            <p>© Copyright 2022 by <a>Travenzia</a></p>
           </div>
         </div>
       </div>
     </div>
   </footer>
   <!--End footer area-->
-
-  <button class="scroll-top scroll-to-target" data-target="html">
-    <span class="icon-angle"></span>
-  </button>
 </div>
 <div class="startBooking" routerLink="/booking">Start Booking</div>

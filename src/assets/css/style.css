@@ -2624,13 +2624,13 @@ select:focus {
 .fact-counter-area {
     position: relative;
     display: block;
-    padding: 115px 0 70px;
+    padding: 208px 0 70px;
 }
 
 .fact-counter-area .icon-holder {
     position: absolute;
     left: 65px;
-    top: -165px;
+    top: -105px;
     animation-name: rotateme;
     animation-duration: 60s;
     animation-iteration-count: infinite;
@@ -3070,7 +3070,7 @@ select:focus {
 
 .discover-area .icon-holder {
     position: absolute;
-    top: -240px;
+    top: -160px;
     right: 145px;
     animation-name: rotateme;
     animation-duration: 60s;
@@ -7140,9 +7140,9 @@ select:focus {
 .success {
     background: #069ef7 !important;
     color: white !important;
-  }
-  .danger {
+}
+
+.danger {
     background: #cc2424 !important;
     color: white !important;
-  }
-  
+}
