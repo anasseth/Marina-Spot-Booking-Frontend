@@ -4,8 +4,6 @@ import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { GlobalService } from '../Services/global.service';
 import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 import {
-  MatSnackBar,
-  MatSnackBarConfig,
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
@@ -16,7 +14,6 @@ import {
   StripeCardElementOptions,
   StripeElementsOptions
 } from "@stripe/stripe-js";
-import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
@@ -25,7 +22,9 @@ import { FormGroup } from '@angular/forms';
 })
 export class CartComponent implements OnInit {
 
+  // Controlling Bootstrap Popup
   @ViewChild('myModal') myModal: any;
+  // Controlling Stripe Card -> Required By Stripe
   @ViewChild(StripeCardComponent) card!: StripeCardComponent;
 
   stripeName: string = "";
@@ -60,6 +59,8 @@ export class CartComponent implements OnInit {
   totalBilling: string = '0';
   showPaymentDailog: boolean = false;
 
+
+  // Stripe Card Properties
   elementsOptions: StripeElementsOptions = {
     locale: "en"
   };
@@ -87,30 +88,39 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // initConfig is a function that initialize paypal checkout card based on your client ID
+    // The details in the functions are provided by the ngx-paypal library
     this.initConfig();
+
+    // getting the data from localstorage that we saved earlier to add bit more detail before we post it on server
     var bookingData: any = localStorage.getItem('bookingData');
     this.bookingData = JSON.parse(bookingData)
     console.log(this.bookingData)
   }
 
   selectCreditCard() {
+    // when credit card is selected, set Paypal and stripe to false
     this.creditCard = true;
     this.paypal = false
     this.stripe = false
   }
 
   selectPaypal() {
+    // when Paypal is selected, set Credit Card and Stripe to false
     this.creditCard = false;
     this.paypal = true;
     this.stripe = false;
   }
+
   selectStripe() {
+    // when Stripe is selected, set Paypal and Credit Card to false
     this.creditCard = false;
     this.paypal = false;
     this.stripe = true;
   }
 
   switchTab() {
+    // Controlling Tab Screen View By Hiding & Showing it.
     if (this.tab1 == true) {
       this.tab2 = true;
       this.tab1 = false;
@@ -124,24 +134,34 @@ export class CartComponent implements OnInit {
   }
 
   PaymentProcess(content?: any) {
+    // first step, we prepare data
     this.finalizeData();
 
+    // if Paypal is true. Open Paypal Dialog
     if (this.paypal) {
       this.open(content);
     }
     else if (this.stripe) {
+      // if Stripe payment is true call stripe API. 
       this.stripePayment();
     }
     else {
+      // If Credit Card is selected we show spinner and call finalize booking and post Data
       this.spinner.show()
       this.finalizeBooking();
     }
   }
 
   finalizeBooking() {
+    // Printing bookingData object 
     console.log(JSON.stringify(this.bookingData, undefined, 2))
+    // Posting Object
     this.global.postBookingData(this.bookingData).subscribe(
       (data) => {
+        // When operation is completed
+        // 1) Hide Spinner
+        // 2) Show Snackbar Message 
+        // 3) Route to Main Page After 4.2 Seconds
         this.spinner.hide()
         this.openSnackBar("Thanks For Booking, Your Spot Has Been Fixed From " + this.bookingData.dateFrom + " to " + this.bookingData.dateTo + " !", "success")
         setTimeout(() => {
@@ -157,9 +177,13 @@ export class CartComponent implements OnInit {
   }
 
   finalizeData() {
-    var totalBilling = this.bookingData.person_qty * this.bookingData.price_per_person + this.bookingData.boat.boat_qty * this.bookingData.boat.boat_price_per_person
+    // Calulating Total Bill / Price
+    var totalBilling = 1 * this.bookingData.marina_price + this.bookingData.boat.boat_qty * this.bookingData.boat.boat_price
+    // We change total billing property to string. Reason: we set this property in Papyal where the required type is string 
+    // therefore we need to set it up as string
     this.totalBilling = totalBilling.toString()
 
+    // setting user details obtained from the form in bookingData object
     this.bookingData.firstName = this.firstName
     this.bookingData.lastName = this.lastName
     this.bookingData.number = this.phoneNumber
@@ -167,20 +191,26 @@ export class CartComponent implements OnInit {
     this.bookingData.email = this.email
     this.bookingData.contact = this.contact
     this.bookingData.additionalInfo = this.additionalInfo
+
     if (this.creditCard) {
+      // if user selects credit card we set payment type credit card and add creadit card number
       this.bookingData.creditCard = true
       this.bookingData.creditCardNumber = this.creditCardNumber
     }
     else if (this.paypal) {
+      // if user selects Paypal, we set payment type of Paypal set to true
       this.bookingData.paypal = true
     }
     else if (this.stripe) {
+      // if user selects Stripe, we set payment type of Stripe set to true
       this.bookingData.stripe = true
     }
     else {
+      // Default Case
       this.bookingData.creditCard = true
       this.bookingData.creditCardNumber = this.creditCardNumber
     }
+    // Setting Booking Status to Confirmed
     this.bookingData.status = "Confirmed"
   }
 
@@ -190,29 +220,32 @@ export class CartComponent implements OnInit {
 
   private initConfig(): void {
     this.payPalConfig = {
-      clientId: "27oJa8EVZwqIYeaW-Je2it8H8VxDtTXs1bTLISChtWiwJ_AgmM0eH6pPEh9dbjsZfCRJW",
+      // Your Paypal Client ID Here
+      clientId: "ATeDj0dEeI-27oJa8EVZwqIYeaW-Je2it8H8VxDtTXs1bTLISChtWiwJ_AgmM0eH6pPEh9dbjsZfCRJW",
       createOrderOnClient: (data) =>
         <ICreateOrderRequest>{
           intent: "CAPTURE",
           purchase_units: [
             {
               amount: {
-                currency_code: "USD",
+                currency_code: "GBP",
                 value: this.totalBilling,
                 breakdown: {
                   item_total: {
-                    currency_code: "USD",
+                    currency_code: "GBP",
                     value: this.totalBilling
                   }
                 }
               },
               items: [
                 {
+                  // Here is the Name of operation for which Payment is received
                   name: "Booking For Marina Spot",
                   quantity: '1',
                   category: "DIGITAL_GOODS",
                   unit_amount: {
-                    currency_code: "USD",
+                    currency_code: "GBP",
+                    // Total Bill Value that was calculated in FinalizeData function
                     value: this.totalBilling
                   }
                 }
@@ -238,8 +271,8 @@ export class CartComponent implements OnInit {
             "onApprove - you can get full order details inside onApprove: ",
             details
           );
-          // Uncomment this line before testing payment method and moving for deployment.
-          // this.finalizeBooking()
+
+          this.finalizeBooking()
         });
       },
       onClientAuthorization: data => {
@@ -261,6 +294,7 @@ export class CartComponent implements OnInit {
   }
 
   open(content: any) {
+    // Ng-Bootstrap Popup . Used to Open Paypal Popup
     this.showPaymentDailog = true;
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -270,6 +304,7 @@ export class CartComponent implements OnInit {
   }
 
   private getDismissReason(reason: any): string {
+    // NG-Bootstrap Popup Function. Called when popup is closed
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
@@ -280,16 +315,19 @@ export class CartComponent implements OnInit {
   }
 
   stripePayment(): void {
+    // This function is called when payment type is set to stripe
+    // setting Customer Firstname
     var name: any = this.firstName
     this.stripeService
       .createToken(this.card.element, { name })
       .subscribe((result) => {
         if (result.token) {
-          // Use the token
+          // If token is returned from the Stripe API we proceed to finalizaBooking Function 
           console.log(result.token.id);
           this.finalizeBooking();
         } else if (result.error) {
           // Error creating the token
+          // Incase of error show snackBar
           console.log(result.error.message);
           this.openSnackBar(result.error.message, "danger")
         }

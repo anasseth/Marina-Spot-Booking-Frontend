@@ -102,9 +102,11 @@
                       class="h6 font-semibold text-muted text-sm d-block mb-2"
                       >New Orders</span
                     >
-                    <span class="h3 font-bold mb-0">{{
-                      this.bookingData.length
-                    }}</span>
+                    <span
+                      *ngIf="this.bookingData != undefined"
+                      class="h3 font-bold mb-0"
+                      >{{ this.bookingData.length }}</span
+                    >
                   </div>
                   <div class="col-auto">
                     <div
@@ -238,9 +240,7 @@
                   </td>
                   <td>
                     £{{
-                      booking.person_qty * booking.price_per_person +
-                        booking.boat.boat_qty *
-                          booking.boat.boat_price_per_person
+                      1 * booking.marina_price + 1 * booking.boat.boat_price
                     }}
                   </td>
                   <td>

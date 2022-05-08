@@ -29,8 +29,8 @@ export class GlobalService {
     postBookingData(Data: any): Observable<any> {
         return this.http.post<any>(environment.apiURL + 'booking/', Data).pipe(catchError(this.error))
     }
-    getIDpass(): Observable<any> {
-        return this.http.get<any>(environment.apiURL + 'password/').pipe(catchError(this.error))
+    adminLogin(obj: any): Observable<any> {
+        return this.http.post<any>(environment.apiURL + 'password', obj).pipe(catchError(this.error))
     }
     getBookingData(): Observable<any> {
         return this.http.get<any>(environment.apiURL + 'booking/').pipe(catchError(this.error))
@@ -42,35 +42,30 @@ export class GlobalService {
         return this.http.delete<any>(environment.apiURL + 'booking/' + id).pipe(catchError(this.error))
     }
     updatePassword2(obj: any) {
-        return this.http.put<any>(environment.apiURL + 'password/' + this.passObject.id, obj).pipe(catchError(this.error))
+        return this.http.put<any>(environment.apiURL + 'password/', obj).pipe(catchError(this.error))
     }
     updatePassword(obj: any) {
         var passObject: any;
         console.log(obj)
-        this.getIDpass().subscribe(
+        this.adminLogin(obj).subscribe(
             (data) => {
-                this.passObject = data[0]
             }, (err) => {
                 console.log(err)
+                this.openSnackBar(err)
             }, () => {
-                if (obj.password == this.passObject.password) {
+                if (true) {
                     obj.password = obj.newpassword;
-                    obj.name = this.passObject.name
                     delete obj.newpassword;
                     console.log(obj)
-                    console.log(this.passObject)
                     this.updatePassword2(obj).subscribe(
                         (data) => {
                             console.log(data)
-                            alert("Password Updated Successfully")
+                            this.openSnackBar("Password Updated Successfully", "success")
                         }, (err) => {
+                            this.openSnackBar(err)
                             console.log(err)
                         }
                     )
-                }
-                else {
-                    alert("Old Password is Incorrect")
-                    return;
                 }
             }
         )

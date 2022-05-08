@@ -1,0 +1,17 @@
+.startBooking {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #022447;
+  color: white;
+  font-weight: 700;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  z-index: 1000;
+}

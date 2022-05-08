@@ -1,0 +1,238 @@
+<!-- <div *ngIf="countrySelectionActive">
+  <h1>Select Country</h1>
+
+  <div class="container">
+    <div class="item">
+      <img
+        src="https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      />
+      <i class="fas fa-hand-point-up"></i>
+    </div>
+
+    <div class="item">
+      <img
+        src="https://images.pexels.com/photos/1856488/pexels-photo-1856488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      />
+      <i class="fas fa-hand-point-up"></i>
+    </div>
+
+    <div class="item">
+      <img
+        src="https://images.pexels.com/photos/1483024/pexels-photo-1483024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      />
+      <i class="fas fa-hand-point-up"></i>
+    </div>
+  </div>
+  <div class="container">
+    <div class="item">
+      <img
+        src="https://images.pexels.com/photos/2533092/pexels-photo-2533092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      />
+      <i class="fas fa-hand-point-up"></i>
+    </div>
+
+    <div class="item">
+      <img
+        src="https://images.pexels.com/photos/2082949/pexels-photo-2082949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      />
+      <i class="fas fa-hand-point-up"></i>
+    </div>
+
+    <div class="item">
+      <img
+        src="https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      />
+      <i class="fas fa-hand-point-up"></i>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="marinaSelectionActive">
+    <h1>Select Country</h1>
+  
+    <div class="container">
+      <div class="item">
+        <img
+          src="https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        />
+        <i class="fas fa-hand-point-up"></i>
+      </div>
+  
+      <div class="item">
+        <img
+          src="https://images.pexels.com/photos/1856488/pexels-photo-1856488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        />
+        <i class="fas fa-hand-point-up"></i>
+      </div>
+  
+      <div class="item">
+        <img
+          src="https://images.pexels.com/photos/1483024/pexels-photo-1483024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        />
+        <i class="fas fa-hand-point-up"></i>
+      </div>
+    </div>
+    <div class="container">
+      <div class="item">
+        <img
+          src="https://images.pexels.com/photos/2533092/pexels-photo-2533092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        />
+        <i class="fas fa-hand-point-up"></i>
+      </div>
+  
+      <div class="item">
+        <img
+          src="https://images.pexels.com/photos/2082949/pexels-photo-2082949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        />
+        <i class="fas fa-hand-point-up"></i>
+      </div>
+  
+      <div class="item">
+        <img
+          src="https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        />
+        <i class="fas fa-hand-point-up"></i>
+      </div>
+    </div>
+  </div> -->
+
+<!-- <form class="form-inline">
+    <div class="form-group">
+      <div class="input-group">
+        <input
+          class="form-control"
+          placeholder="yyyy-mm-dd"
+          name="dp"
+          [(ngModel)]="model"
+          ngbDatepicker
+          #d="ngbDatepicker"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary calendar"
+            (click)="d.toggle()"
+            type="button"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </form> -->
+
+<!-- <h1>The beauty of Seasons</h1> -->
+<div class="containerCountryMain">
+  <div class="containerCountry" *ngIf="dateSelectionActive">
+    <div style="width: 100%; margin-bottom: 30px">
+      <h1
+        style="
+          color: white;
+          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: 700;
+        "
+      >
+        Pick Up Your Stay Period
+      </h1>
+    </div>
+
+    <div
+      style="width: 80%; display: flex; justify-content: center; padding: 50px"
+    >
+      <ngb-datepicker
+        #dp
+        (dateSelect)="onDateSelection($event)"
+        [displayMonths]="2"
+        [dayTemplate]="t"
+        outsideDays="hidden"
+        style="background-color: white; margin: auto"
+      >
+      </ngb-datepicker>
+
+      <ng-template #t let-date let-focused="focused">
+        <span
+          class="custom-day"
+          [class.focused]="focused"
+          [class.range]="isRange(date)"
+          [class.faded]="isHovered(date) || isInside(date)"
+          (mouseenter)="hoveredDate = date"
+          (mouseleave)="hoveredDate = null"
+        >
+          {{ date.day }}
+        </span>
+      </ng-template>
+    </div>
+    <div style="width: 100%">
+      <button (click)="activeSpotSelection()" class="NextButton">Next</button>
+    </div>
+  </div>
+
+  <div class="containerCountry" *ngIf="countrySelectionActive">
+    <div style="width: 100%; margin-bottom: 30px">
+      <h1
+        style="
+          color: white;
+          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: 700;
+        "
+      >
+        Select a Marina Spot for the tour
+      </h1>
+    </div>
+
+    <div
+      class="card active"
+      (click)="setTouringSpot(marina)"
+      *ngFor="let marina of marinasData"
+    >
+      <div
+        class="bg"
+        [ngStyle]="{ 'background-image': 'url(' + marina.imageURL + ')' }"
+      >
+        <div class="content">
+          <div class="data">
+            <div class="circle"><i class="fas fa-snowflake"></i></div>
+            <div class="detail">
+              <h4 class="title">{{ marina.name }}</h4>
+              <p>{{ marina.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="containerCountry" *ngIf="boatSeclectionActive">
+    <div style="width: 100%; margin-bottom: 30px">
+      <h1
+        style="
+          color: white;
+          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: 700;
+        "
+      >
+        Select a Boat for the tour
+      </h1>
+    </div>
+    <div
+      class="card active"
+      *ngFor="let boat of boatData"
+      (click)="saveData(boat)"
+    >
+      <div
+        class="bg"
+        [ngStyle]="{ 'background-image': 'url(' + boat.boat_imageURL + ')' }"
+      >
+        <div class="content">
+          <div class="data">
+            <div class="circle"><i class="fa fa-snowflake"></i></div>
+            <div class="detail">
+              <h4 class="title">{{ boat.boat_name }}</h4>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
